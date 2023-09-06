@@ -6,8 +6,7 @@ function szamol(){
     let sebesseg = parseInt(document.getElementById("seb").value);
     let sebessegAtszamolt = document.getElementById("kbps").selected ? sebesseg : document.getElementById("mbps").selected ? sebesseg * valtoSzam : document.getElementById("gbps").selected ? sebesseg * Math.pow(valtoSzam, 2) : sebesseg * Math.pow(valtoSzam, 3);
     let eredmeny = kapacitasAtszamolt / sebessegAtszamolt;
-    document.getElementById("eredmeny").innerHTML = idotValt(eredmeny);
-    //alert(eredmeny)
+    document.getElementById("eredmeny").innerHTML = document.getElementById("kap").value == "" ? "Nincs adat megadva!" : kapacitas > 9999999999 ? "Túl nagy kapacitás!" : eredmeny < 0.5 ? "Kevesebb, mint egy másodperc!" : idotValt(eredmeny);
 }
 
 function idotValt(bemeno){

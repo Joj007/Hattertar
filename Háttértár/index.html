@@ -4,12 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="Images/icopn.png" type="image/x-icon">
     <script src="script.js"></script>
     <title>Háttértár</title>
 </head>
 <body>
-    <input onchange="valtoszamValto()" type="range" value="1000" min="1000" max="1024" step="24" id="valtoszam">
-    <label id="valtoszamJelzo" for="valtoszam">1000</label>
+    <div id="valtoszamDIV">
+        <input onchange="valtoszamValto()" type="range" value="1000" min="1000" max="1024" step="24" id="valtoszam">
+        <label id="valtoszamJelzo" for="valtoszam">1000</label>
+    </div>
+
     <br>
     <label id="eredmeny"></label>
     <form>
